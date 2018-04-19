@@ -29,7 +29,7 @@ data_numerically = [ord(x) for x in data]
 channel_1 = data_numerically[::2]
 channel_2 = data_numerically[1::2]
 print "FFT..."
-fftdata = abs(np.fft.fft(data_numerically))
+fftdata = abs(np.fft.fft(channel_1))
 print "FFT Frequencies..."
-freq = np.fft.fftfreq(len(data_numerically))
+freq = np.fft.fftfreq(len(channel_1))
 # https://stackoverflow.com/questions/604453/analyze-audio-using-fast-fourier-transform
